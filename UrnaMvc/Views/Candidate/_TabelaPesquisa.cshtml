@@ -1,0 +1,70 @@
+﻿@using UrnaMvc.Models;
+@using System.Collections.Generic;
+@model List<Candidate>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-centered table-borderless table-hover w-100 dt-responsive nowrap dataTable">
+            <thead class="thead-light">
+                <tr>
+                    <th style="width: 100px;">Ações</th>
+                    <th>Legenda</th>
+                    <th class="all">Candidato</th>
+                    <th>Vice</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Candidate candidate in Model)
+                {
+                    <tr>
+                        <td>
+                            <div class="d-flex">
+                                <button class="btn btn-danger btn-sm" onclick="AbrirModalExclusao(@candidate.Id);">
+                                    Excluir
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <label class="m-0">@candidate.Legenda</label>
+                        </td>
+                        <td>
+                            <label class="m-0">@candidate.NomeCompleto</label>
+                        </td>
+                        <td>
+                            <label class="m-0">@candidate.NomeVice</label>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="ModalExcluir" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="TituloModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-filled" style="background-color: rgb(242, 119, 121)">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="TituloModal" style="color: white;">Pergunta</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">×</button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="CodigoCandidatoExcluir" />
+                    <p style="color: white;">Deseja mesmo excluir esse candidato? (Os votos direcionados à ele também serão excluídos)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Não</button>
+                    <button id="ModalExcluirBotaoExcluir" type="button" class="btn btn-outline-light">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/Candidate/_TabelaPesquisa.js"></script>
+}
+else
+{
+    <div class="w-100 m-5">
+        <h3 class="text-center text-secondary">Nenhum candidato encontrado</h3>
+    </div>
+}
