@@ -4,6 +4,9 @@ using UrnaMvc.Models;
 
 namespace UrnaMvc.Data
 {
+    // DataContext é a forma que "configuramos" nossa entrada ao banco de dados. 
+    // DbContext é a herança feita do EntityFramework para poder utilizar este framework, onde é permitido utilizarmos vários comandos diferenciados.
+    //
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)

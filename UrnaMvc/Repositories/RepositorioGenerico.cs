@@ -4,6 +4,9 @@ using UrnaMvc.Interfaces;
 
 namespace UrnaMvc.Repositories
 {
+    // Repositório Genérico, é utilizado para itens que há uma repetição muito grande em vários locais, ex CRUD.
+    // Porém, deve ser observado se não irá, na verdade, atrapalhar o desempenho do seu código,
+    // dependendo da situação, é melhor utilizar diretamento o DbContext e Entity para fazer o Crud, mas depende de cada situação. 
     public class RepositorioGenerico<TEntity> : IRepositorioGenerico<TEntity> where TEntity : class
     {
         private readonly DataContext _context;

@@ -28,6 +28,8 @@
                 const divProgress = document.createElement('div');
                 divProgress.className = 'progress';
 
+                // Barra de percentual de votos
+
                 const divProgressBar = document.createElement('div');
                 divProgressBar.className = 'progress-bar';
                 divProgressBar.setAttribute('role', 'progressbar');

@@ -5,6 +5,11 @@ using UrnaMvc.Models;
 
 namespace UrnaMvc.Repositories
 {
+    // Repository Pattern - Repositories
+
+    // Finalidade básica é prover um acesso único a uma fonte de dados. Externalizar o acesso ao dado e evitar repetir sempre o mesmo código.
+    // Normalmente, possui sempre um repositório para cada modelo.
+    // Aqui fica uma tentativa de SPOF - Ponto único de falha, pois quando mais repetição, mais locais podem falhar.
     public class CandidateRepositorio : RepositorioGenerico<Candidate>, ICandidateRepositorio
     {
         private readonly DataContext _context;

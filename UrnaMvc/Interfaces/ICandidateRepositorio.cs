@@ -2,6 +2,8 @@
 
 namespace UrnaMvc.Interfaces
 {
+    // Padrão de Design Pattern - Interface
+     
     public interface ICandidateRepositorio : IRepositorioGenerico<Candidate>
     {
         List<Candidate> PesquisarPorNome(string descricao);
