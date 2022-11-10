@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "votes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">
+                        <a asp-action="Index" asp-controller="Home" data-trn-key="BREADCRUMB_MENU_PRINCIPAL">Menu Principal</a>
+                    </li>
+                    <li class="breadcrumb-item active">Apuração dos votos</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Apuração dos votos</h4>
+        </div>
+    </div>
+</div>
+<div id="ContainerApuracao" class="container border border-secondary mt-5 p-3">
+    <p class="h3 text-center">Apuração dos votos</p>
+    <hr />
+</div>
+@*<script src="https://code.jquery.com/jquery-1.9.1.js"></script>*@
+<script src="~/js/Voting/Apuracao.js"></script>

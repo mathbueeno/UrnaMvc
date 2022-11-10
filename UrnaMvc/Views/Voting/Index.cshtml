@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/UrnaEletronica.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="~/js/Voting/Index.js"></script>
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">
+                        <a asp-action="Index" asp-controller="Home" data-trn-key="BREADCRUMB_MENU_PRINCIPAL">Menu Principal</a>
+                    </li>
+                    <li class="breadcrumb-item active">Urna eletrônica</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Urna eletrônica</h4>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="branco">
+        <div class="cinzaClaro">
+            <p>Número:</p>
+            <input id="PrimeiroDigitoLegenda" style="pointer-events: none;" size="1" maxlength="1" type="text" readonly />
+            <input id="SegundoDigitoLegenda" style="pointer-events: none;" size="1" maxlength="1" type="text" readonly />
+            <p>Nome:</p>
+            <div id="AreaRenderizarNomeCandidato"></div>
+            <div id="AreaRenderizarNomeVice"></div>
+        </div>
+        <div class="cinzaEscuro">
+            <b>JUSTIÇA<br>ELEITORAL</b>
+        </div>
+        <div class="preto">
+            <button class="bnt click" name="BotaoUrna">1</button>
+            <button class="bnt click" name="BotaoUrna">2</button>
+            <button class="bnt click" name="BotaoUrna">3 </button>
+            <button class="bnt click" name="BotaoUrna">4</button>
+            <button class="bnt click" name="BotaoUrna">5</button>
+            <button class="bnt click" name="BotaoUrna">6</button>
+            <button class="bnt click" name="BotaoUrna">7</button>
+            <button class="bnt click" name="BotaoUrna">8</button>
+            <button class="bnt click" name="BotaoUrna">9</button>
+            <button class="bnt click" name="BotaoUrna">0</button>
+            <div class="teclado2">
+                <button class="branco click" name="BotaoUrna">BRANCO</button>
+                <button id="BotaoCorrige" class="laranja click">CORRIGE</button>
+                <button id="BotaoConfirma" class="verde">CONFIRMA</button>
+            </div>
+        </div>
+    </div>
+</div>  

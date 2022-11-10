@@ -101,7 +101,7 @@ $(document).ready(function () {
     //#endregion
 
     //#region Inserção de máscara no campo de legenda
-    $('#Legenda').mask('00', { reverse: true });
+    //$('#Legenda').mask('00', { reverse: true });
     //#endregion
 
     //#region Função visual para atribuir o foco ao campo após clicar em adicionar
